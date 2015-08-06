@@ -17,9 +17,10 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='gvim'
 export PAGER='less'
+export CH_HIPCHAT_SECRET=134fd709c3cd940332203cf5a4b753
 
 #
 # Language
@@ -43,6 +44,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  $HOME//bin
   /usr/local/{bin,sbin}
   $path
 )

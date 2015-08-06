@@ -1,0 +1,33 @@
+#
+# A simple and fast theme with vcs_info integration.
+#
+# Authors:
+#   soliah <soliah@gmail.com>
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   dnuux <dnuuxx@gmail.com>
+#
+
+function prompt_soliah_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Load required functions.
+  autoload -Uz add-zsh-hook
+  autoload -Uz vcs_info
+
+  # Add hook for calling vcs_info before each command.
+  add-zsh-hook precmd vcs_info
+
+  zstyle ':vcs_info:*' enable git
+  zstyle ':vcs_info:git:*' formats "%F{blue}%s:%F{green}%b%f"
+  zstyle ':prezto:module:editor:info:keymap:alternate' format '%B%F{blue}✱%f%b'
+
+  # Define prompts.
+  PROMPT='%F{blue}%n%f at %F{red}%m%f in %F{cyan}%~%f ${vcs_info_msg_0_}
+%(?.%F{green}.%F{red})$%f '
+  RPROMPT='${editor_info[keymap]}'
+  SPROMPT="zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? "
+}
+
+prompt_soliah_setup "$@"

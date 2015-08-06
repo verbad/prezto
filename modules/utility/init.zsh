@@ -56,8 +56,9 @@ alias mv="${aliases[mv]:-mv} -i"
 alias p='${(z)PAGER}'
 alias po='popd'
 alias pu='pushd'
-alias rm="${aliases[rm]:-rm} -i"
+#alias rm="${aliases[rm]:-rm} -i"
 alias type='type -a'
+alias hg='history -1000 |grep'
 
 # ls
 if is-callable 'dircolors'; then

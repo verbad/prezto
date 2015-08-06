@@ -27,12 +27,17 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'git'    \
   'history' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt'
+  'ruby'  \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt'   \
+  'verbad'
 
 #
 # Editor
