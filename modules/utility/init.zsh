@@ -32,6 +32,7 @@ alias mkdir='nocorrect mkdir'
 alias mv='nocorrect mv'
 alias mysql='nocorrect mysql'
 alias rm='nocorrect rm'
+alias ta='tmux a -t'
 
 # Disable globbing.
 alias bower='noglob bower'
